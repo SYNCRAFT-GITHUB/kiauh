@@ -73,6 +73,7 @@ function upload_selection() {
   find_logfile "mainsail.*" "${webif_logs}"
   find_logfile "fluidd.*" "${webif_logs}"
   find_logfile "KlipperScreen.log" "/tmp"
+  find_logfile "SwierVision.log" "/tmp"
   find_logfile "webcamd\.log(\.[0-9]+)?$" "/var/log"
   find_logfile "kiauh\.log" "/tmp"
 

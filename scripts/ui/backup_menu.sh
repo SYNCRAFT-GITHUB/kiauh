@@ -19,13 +19,13 @@ function backup_ui() {
   hr
   echo -e "| Klipper & API:             | Touchscreen GUI:         |"
   echo -e "|  1) [Klipper]              |  7) [KlipperScreen]      |"
-  echo -e "|  2) [Moonraker]            |                          |"
+  echo -e "|  2) [Moonraker]            |  8) [SwierVision]        |"
   echo -e "|  3) [Config Folder]        | 3rd Party Webinterface:  |"
-  echo -e "|  4) [Moonraker Database]   |  8) [OctoPrint]          |"
+  echo -e "|  4) [Moonraker Database]   |  9) [OctoPrint]          |"
   echo -e "|                            |                          |"
   echo -e "| Klipper Webinterface:      | Other:                   |"
-  echo -e "|  5) [Mainsail]             |  9) [Telegram Bot]       |"
-  echo -e "|  6) [Fluidd]               | 10) [OctoEverywhere]     |"
+  echo -e "|  5) [Mainsail]             |  10) [Telegram Bot]       |"
+  echo -e "|  6) [Fluidd]               | 11) [OctoEverywhere]     |"
   back_footer
 }
 
@@ -50,11 +50,13 @@ function backup_menu() {
         do_action "backup_fluidd" "backup_ui";;
       7)
         do_action "backup_klipperscreen" "backup_ui";;
-      8)
-        do_action "backup_octoprint" "backup_ui";;
+      7)
+        do_action "backup_swiervision" "backup_ui";;
       9)
-        do_action "backup_telegram_bot" "backup_ui";;
+        do_action "backup_octoprint" "backup_ui";;
       10)
+        do_action "backup_telegram_bot" "backup_ui";;
+      11)
         do_action "backup_octoeverywhere" "backup_ui";;
       B|b)
         clear; main_menu; break;;

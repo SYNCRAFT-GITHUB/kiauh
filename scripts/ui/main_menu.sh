@@ -28,7 +28,7 @@ function main_ui() {
   echo -e "|                  |           Obico: $(print_status "moonraker_obico")|"
   echo -e "|                  |  OctoEverywhere: $(print_status "octoeverywhere")|"
   echo -e "|                  |     Mobileraker: $(print_status "mobileraker")|"
-  echo -e "|                  |                                    |"
+  echo -e "|                  |     SwierVision: $(print_status "swiervision")|"
   echo -e "|                  |       Octoprint: $(print_status "octoprint")|"
   hr
   echo -e "|  $(print_kiauh_version)|    Changelog: ${magenta}https://git.io/JnmlX${white} |"

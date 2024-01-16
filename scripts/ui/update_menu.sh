@@ -27,16 +27,18 @@ function update_ui() {
   echo -e "|                        |               |              |"
   echo -e "| Touchscreen GUI:       |---------------|--------------|"
   echo -e "|  5) [KlipperScreen]    |$(compare_klipperscreen_versions)|"
+  echo -e "|  6) [SwierVision]      |$(compare_swiervision_versions)|"
+  echo -e "|                        |               |              |"
   echo -e "|                        |               |              |"
   echo -e "| Other:                 |---------------|--------------|"
-  echo -e "|  6) [PrettyGCode]      |$(compare_prettygcode_versions)|"
-  echo -e "|  7) [Telegram Bot]     |$(compare_telegram_bot_versions)|"
-  echo -e "|  8) [Obico for Klipper]|$(compare_moonraker_obico_versions)|"
-  echo -e "|  9) [OctoEverywhere]   |$(compare_octoeverywhere_versions)|"
-  echo -e "| 10) [Mobileraker]      |$(compare_mobileraker_versions)|"
-  echo -e "| 11) [Crowsnest]        |$(compare_crowsnest_versions)|"
+  echo -e "|  7) [PrettyGCode]      |$(compare_prettygcode_versions)|"
+  echo -e "|  8) [Telegram Bot]     |$(compare_telegram_bot_versions)|"
+  echo -e "|  9) [Obico for Klipper]|$(compare_moonraker_obico_versions)|"
+  echo -e "| 10) [OctoEverywhere]   |$(compare_octoeverywhere_versions)|"
+  echo -e "| 11) [Mobileraker]      |$(compare_mobileraker_versions)|"
+  echo -e "| 12) [Crowsnest]        |$(compare_crowsnest_versions)|"
   echo -e "|                        |------------------------------|"
-  echo -e "| 12) [System]           |  $(check_system_updates)   |"
+  echo -e "| 13) [System]           |  $(check_system_updates)   |"
   back_footer
 }
 
@@ -61,18 +63,20 @@ function update_menu() {
       5)
         do_action "update_klipperscreen" "update_ui";;
       6)
-        do_action "update_pgc_for_klipper" "update_ui";;
+        do_action "update_swiervision" "update_ui";;
       7)
-        do_action "update_telegram_bot" "update_ui";;
+        do_action "update_pgc_for_klipper" "update_ui";;
       8)
-        do_action "update_moonraker_obico" "update_ui";;
+        do_action "update_telegram_bot" "update_ui";;
       9)
-        do_action "update_octoeverywhere" "update_ui";;
+        do_action "update_moonraker_obico" "update_ui";;
       10)
-        do_action "update_mobileraker" "update_ui";;
+        do_action "update_octoeverywhere" "update_ui";;
       11)
-        do_action "update_crowsnest" "update_ui";;
+        do_action "update_mobileraker" "update_ui";;
       12)
+        do_action "update_crowsnest" "update_ui";;
+      13)
         do_action "upgrade_system_packages" "update_ui";;
       a)
         do_action "update_all" "update_ui";;
@@ -117,6 +121,9 @@ function update_all() {
 
     [[ "${update_arr[*]}" =~ "klipperscreen" ]] && \
     echo -e "|  ${cyan}● KlipperScreen${white}                                      |"
+
+        [[ "${update_arr[*]}" =~ "swiervision" ]] && \
+    echo -e "|  ${cyan}● SwierVision${white}                                      |"
 
     [[ "${update_arr[*]}" =~ "pgc_for_klipper" ]] && \
     echo -e "|  ${cyan}● PrettyGCode for Klipper${white}                            |"

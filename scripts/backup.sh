@@ -180,6 +180,21 @@ function backup_klipperscreen() {
   fi
 }
 
+function backup_swiervision() {
+  local current_date
+  if [[ -d ${SWIERVISION_DIR} ]] ; then
+    status_msg "Creating SwierVision backup ..."
+    check_for_backup_dir
+    current_date=$(get_date)
+    status_msg "Timestamp: ${current_date}"
+    mkdir -p "${BACKUP_DIR}/swiervision-backups/${current_date}"
+    cp -r "${SWIERVISION_DIR}" "${_}"
+    print_confirm "SwierVision backup complete!"
+  else
+    print_error "Can't back up SwierVision directory!\n Not found!"
+  fi
+}
+
 function backup_telegram_bot() {
   local current_date
 

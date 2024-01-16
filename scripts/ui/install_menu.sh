@@ -20,17 +20,17 @@ function install_ui() {
   echo -e "|  functions on a completely fresh system.              |"
   hr
   echo -e "| Firmware & API:          | 3rd Party Webinterface:    |"
-  echo -e "|  1) [Klipper]            |  6) [OctoPrint]            |"
+  echo -e "|  1) [Klipper]            |  7) [OctoPrint]            |"
   echo -e "|  2) [Moonraker]          |                            |"
   echo -e "|                          | Other:                     |"
-  echo -e "| Klipper Webinterface:    |  7) [PrettyGCode]          |"
-  echo -e "|  3) [Mainsail]           |  8) [Telegram Bot]         |"
-  echo -e "|  4) [Fluidd]             |  9) $(obico_install_title) |"
-  echo -e "|                          | 10) [OctoEverywhere]       |"
-  echo -e "|                          | 11) [Mobileraker]          |"
+  echo -e "| Klipper Webinterface:    |  8) [PrettyGCode]          |"
+  echo -e "|  3) [Mainsail]           |  9) [Telegram Bot]         |"
+  echo -e "|  4) [Fluidd]             | 10) $(obico_install_title) |"
+  echo -e "|                          | 11) [OctoEverywhere]       |"
+  echo -e "|                          | 12) [Mobileraker]          |"
   echo -e "| Touchscreen GUI:         |                            |"
-  echo -e "|  5) [KlipperScreen]      | Webcam Streamer:           |"
-  echo -e "|                          | 12) [Crowsnest]            |"
+  echo -e "|  5) [Syncraft KS]        | Webcam Streamer:           |"
+  echo -e "|  6) [SwierVision]        | 13) [Crowsnest]            |"
   back_footer
 }
 
@@ -60,18 +60,20 @@ function install_menu() {
       5)
         do_action "install_klipperscreen" "install_ui";;
       6)
-        do_action "octoprint_setup_dialog" "install_ui";;
+        do_action "install_swiervision" "install_ui";;
       7)
-        do_action "install_pgc_for_klipper" "install_ui";;
+        do_action "octoprint_setup_dialog" "install_ui";;
       8)
-        do_action "telegram_bot_setup_dialog" "install_ui";;
+        do_action "install_pgc_for_klipper" "install_ui";;
       9)
-        do_action "moonraker_obico_setup_dialog" "install_ui";;
+        do_action "telegram_bot_setup_dialog" "install_ui";;
       10)
-        do_action "octoeverywhere_setup_dialog" "install_ui";;
+        do_action "moonraker_obico_setup_dialog" "install_ui";;
       11)
-        do_action "install_mobileraker" "install_ui";;
+        do_action "octoeverywhere_setup_dialog" "install_ui";;
       12)
+        do_action "install_mobileraker" "install_ui";;
+      13)
         do_action "install_crowsnest" "install_ui";;
       B|b)
         clear; main_menu; break;;

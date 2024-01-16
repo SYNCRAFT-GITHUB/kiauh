@@ -51,6 +51,11 @@ function set_globals() {
   KLIPPERSCREEN_DIR="${HOME}/KlipperScreen"
   KLIPPERSCREEN_REPO="https://github.com/jordanruthe/KlipperScreen.git"
 
+    #=============== SWIERVISION ================#
+  SWIERVISION_ENV="${HOME}/.SwierVision-env"
+  SWIERVISION_DIR="${HOME}/SwierVision"
+  SWIERVISION_REPO="https://github.com/SYNCRAFT-GITHUB/SwierVision.git"
+
   #========== MOONRAKER-TELEGRAM-BOT ============#
   TELEGRAM_BOT_ENV="${HOME}/moonraker-telegram-bot-env"
   TELEGRAM_BOT_DIR="${HOME}/moonraker-telegram-bot"
