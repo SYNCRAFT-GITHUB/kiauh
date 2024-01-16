@@ -49,7 +49,7 @@ function set_globals() {
   #=============== KLIPPERSCREEN ================#
   KLIPPERSCREEN_ENV="${HOME}/.KlipperScreen-env"
   KLIPPERSCREEN_DIR="${HOME}/KlipperScreen"
-  KLIPPERSCREEN_REPO="https://github.com/jordanruthe/KlipperScreen.git"
+  KLIPPERSCREEN_REPO="https://github.com/SYNCRAFT-GITHUB/KlipperScreen.git"
 
     #=============== SWIERVISION ================#
   SWIERVISION_ENV="${HOME}/.SwierVision-env"
